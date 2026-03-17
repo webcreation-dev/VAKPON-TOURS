@@ -1,0 +1,350 @@
+
+VAKPON TOURS SARL - V1
+
+DOCUMENT DE SPÉCIFICATION FONCTIONNELLE
+Version 1.0 — Document destiné à toute l'équipe
+Ce document décrit dans le détail chaque fonctionnalité de la plateforme,
+1. Présentation générale du projet
+1.1 Qu'est-ce que Vankpo Tours ?
+Vakpon tours est une plateforme web (accessible depuis un navigateur, sur ordinateur ou smartphone) qui permet à des personnes vivant en occident de réserver facilement un séjour complet au Bénin.
+L'idée est simple : l'utilisateur choisit un pack de voyage tout-inclus (hébergement, transport, visites, guide local, restauration...), crée un compte sur la plateforme, et soumet sa réservation. L'équipe de Vakpon tours prend ensuite contact avec lui pour finaliser le paiement et organiser son séjour de A à Z.
+
+1.2 Pourquoi ce projet ?
+Le Bénin est une destination touristique riche mais encore peu représentée sur les grandes plateformes internationales. Des millions de personnes issues de la diaspora africaine, des touristes culturels et des voyageurs du monde entier cherchent à découvrir l'Afrique de l'Ouest de manière simple, sécurisée et organisée.
+Aucune plateforme spécialisée ne propose aujourd'hui un service de voyage tout-compris dédié au Bénin. Vakpon tours comble ce vide.
+
+1.3 Les trois grandes parties de la plateforme
+
+Partie
+Qui l'utilise ?
+À quoi ça sert ?
+Site Vitrine
+Tout le monde (visiteurs)
+Présenter le projet, les packs, inspirer confiance
+Web App
+Les clients
+Créer un compte, réserver un pack, suivre son séjour
+Dashboard Administrateur
+L'équipe Vakpon tours
+Gérer les packs, les réservations, les clients
+
+
+2. Le Site Vitrine
+2.1 Rôle du site vitrine
+Le site vitrine est la première chose que voit un visiteur lorsqu'il entend parler de Vakpon tours. Son rôle est de donner envie, d'informer et d'inciter à s'inscrire. Il ne nécessite pas de compte pour être consulté.
+
+2.2 Contenu du site vitrine
+Page d'accueil
+	•	Un slogan fort et accrocheur (ex : "Découvrez le Bénin comme jamais")
+	•	Des photos ou vidéos de haute qualité : Ouidah, Ganvié, Abomey, fêtes locales
+	•	Un résumé des packs disponibles avec bouton d'appel à l'action : "Réserver mon séjour"
+	•	Des témoignages de clients satisfaits
+	•	Un compteur ou indicateur de confiance (ex : "Plus de 200 voyageurs accompagnés")
+
+Page Packs & Offres
+	•	Liste de tous les packs proposés
+	•	Chaque pack affiche : le nom, la durée, le prix, les points forts inclus
+	•	Un bouton « Voir les détails » mène vers la page de détail du pack
+	•	Un bouton « Réserver ce pack » mène vers la page de création de compte
+
+Page À propos
+	•	Présentation de l'équipe et de la mission de Vakpon Tours
+	•	Valeurs : authenticité, sécurité, accompagnement personnalisé
+
+Page Contact
+	•	Formulaire de contact simple (nom, email, message)
+	•	Numéro WhatsApp ou email de l'équipe
+	•	Carte de localisation si pertinente
+
+Page Guide du voyageur (espace info)
+Cette page est accessible à tous. Elle contient des informations utiles pour préparer et vivre son séjour au Bénin.
+	•	Formalités d'entrée au Bénin (visa, documents requis)
+	•	Conseils santé (vaccins recommandés, précautions)
+	•	Monnaie locale et moyens de paiement
+	•	Transport sur place
+	•	Météo et meilleures périodes pour visiter
+	•	Sécurité et conseils pratiques
+	•	Liste des lieux incontournables
+
+
+3. La Web App — Espace Client
+La Web App est la partie interactive de la plateforme. C'est là qu'un client crée son compte, choisit son pack, soumet sa réservation, et suit l'avancement de son dossier. Elle s'installe comme une application sur le téléphone mais fonctionne aussi depuis le navigateur.
+
+3.1 Création de compte
+Comment ça marche ?
+Lorsqu'un visiteur clique sur « S'inscrire » ou « Réserver », il est redirigé vers une page d'inscription simple.
+
+Informations demandées lors de l'inscription :
+	•	Prénom et nom
+	•	Adresse email
+	•	Numéro de téléphone (WhatsApp de préférence)
+	•	Pays de résidence
+	•	Mot de passe
+
+Après inscription :
+	•	L'utilisateur reçoit un email de confirmation
+	•	Il doit cliquer sur le lien pour activer son compte
+	•	Il est ensuite connecté automatiquement
+
+💡 Note importante : L'inscription ne nécessite aucun paiement. Le client peut créer un compte et explorer librement.
+
+3.2 Connexion
+Pour accéder à son espace personnel, l'utilisateur entre son email et son mot de passe. Une option « Mot de passe oublié » envoie un lien de réinitialisation par email.
+
+3.3 Espace personnel du client
+Après connexion, le client arrive sur dans son espace personnel. C'est son espace central pour tout gérer.
+
+Il contient :
+	•	Un résumé de ses réservations en cours
+	•	Le statut de chaque réservation (voir section 3.5)
+	•	Les messages ou notifications de l'équipe
+	•	Un accès à l'espace Guide du Voyageur
+	•	La possibilité de modifier ses informations personnelles
+
+3.4 Choisir et soumettre une réservation
+Étape 1 — Parcourir les packs disponibles
+Depuis son tableau de bord ou la page des offres, le client consulte les packs disponibles. Chaque pack présente :
+	•	Le nom et la description du séjour
+	•	La durée (ex : 7 jours / 10 jours)
+	•	Le prix total
+	•	La liste des éléments inclus (hébergement, repas, transport, visites, guide...)
+	•	Des photos illustratives
+	•	Les dates disponibles (si applicables)
+
+Étape 2 — Sélectionner un pack et choisir une date
+Le client clique sur « Réserver ce pack ». Il choisit :
+	•	La date souhaitée pour le début du séjour
+	•	Le nombre de participants (lui seul, ou un groupe)
+	•	Des options supplémentaires si disponibles (ex : chambre individuelle, excursion bonus)
+
+Étape 3 — Valider la réservation (sans paiement immédiat)
+Le client confirme sa demande. Un message clair lui est affiché pour lui expliquer la suite :
+
+💡 "Votre demande de réservation a bien été enregistrée. Un membre de notre équipe va vous contacter dans les 24 à 48 heures pour vous guider dans les étapes du paiement. Vous recevrez également un email de confirmation."
+
+Le client reçoit alors un email récapitulatif de sa demande.
+
+3.5 Suivi de la réservation — Les statuts
+Chaque réservation passe par plusieurs étapes visibles par le client dans son tableau de bord.
+
+Statut
+Ce que cela signifie
+En attente
+La réservation a été soumise. L'équipe va prendre contact.
+Contacté
+Un membre de l'équipe a pris contact avec le client.
+En attente de paiement
+Le client a reçu les instructions pour payer.
+Preuve de paiement soumise
+Le client a envoyé sa preuve de paiement.
+Paiement vérifié
+L'équipe a confirmé le paiement.
+Réservation confirmée
+Tout est validé. Le séjour est officiellement bookée.
+Séjour terminé
+Le client a effectué son voyage.
+Annulée
+La réservation a été annulée (par le client ou l'équipe).
+
+3.6 Soumission de la preuve de paiement
+Après avoir effectué le paiement selon les instructions reçues (virement, mobile money, etc.), le client revient sur sa réservation dans l'application et :
+	•	Clique sur « Soumettre ma preuve de paiement »
+	•	Télécharge une capture d'écran ou un justificatif
+	•	Ajoute une note si nécessaire (ex : date et heure du virement)
+	•	Soumet le document
+
+L'équipe est alors notifiée et procède à la vérification. Le statut de la réservation est mis à jour automatiquement.
+
+3.7 Espace Guide du Voyageur (client connecté)
+Une fois connecté, le client a accès à une version enrichie de l'espace informationnel. Il peut y trouver toutes les informations dont il aura besoin avant et pendant son séjour au Bénin.
+
+Contenu disponible :
+	•	Programme détaillé de son séjour (jour par jour)
+	•	Contacts utiles : guide local, hôtel, urgences
+	•	Informations pratiques : visa, santé, argent, transport
+	•	Carte interactive ou plan des lieux à visiter
+	•	FAQ : questions fréquentes des voyageurs
+	•	Documents téléchargeables : bon de réservation, itinéraire, etc.
+
+
+4. Le Dashboard Administrateur
+Le tableau de bord administrateur est l'outil de gestion interne utilisé uniquement par l'équipe Vakpon tours. Il permet de créer les packs, de gérer les réservations, de suivre les clients, et de valider les paiements.
+
+4.1 Gestion des Packs
+C'est ici que l'équipe crée, modifie ou désactive les offres de voyage disponibles pour les clients.
+
+Créer un nouveau pack
+	•	Nom du pack (ex : « Pack 7 jours – Retour aux Racines »)
+	•	Description détaillée du séjour
+	•	Durée (en jours)
+	•	Prix total affiché au client
+	•	Liste des éléments inclus (hébergement, repas, transport, visites, guide, etc.)
+	•	Photos et visuels
+	•	Dates disponibles ou disponibilité permanente
+	•	Nombre de places maximum
+	•	Statut : publié (visible), brouillon (non visible), archivé
+
+Modifier ou désactiver un pack
+	•	L'équipe peut à tout moment modifier le contenu, le prix ou les disponibilités
+	•	Un pack peut être mis en brouillon pour être masqué temporairement
+	•	Un pack archivé n'est plus visible mais ses données historiques sont conservées
+
+4.2 Gestion des Réservations
+C'est le cœur opérationnel du dashboard. Toutes les demandes de réservation des clients apparaissent ici.
+
+Vue d'ensemble des réservations
+	•	Liste de toutes les réservations avec : nom du client, pack choisi, date souhaitée, statut, date de soumission
+	•	Filtres disponibles : par statut, par pack, par date, par agent assigné
+	•	Indicateurs rapides : nombre de nouvelles demandes, réservations en attente de paiement, etc.
+
+Traitement d'une réservation
+Lorsqu'une nouvelle réservation arrive :
+	•	Un agent est assigné à la réservation
+	•	Il accède à la fiche complète du client et de sa demande
+	•	Il envoie un message ou passe un appel pour guider le client
+	•	Il met à jour le statut de la réservation au fur et à mesure
+	•	Lorsque la preuve de paiement est soumise, il la vérifie
+	•	Il valide ou rejette le paiement avec commentaire si nécessaire
+	•	Après validation, il confirme officiellement la réservation
+
+Fiche d'une réservation
+Chaque réservation dispose d'une fiche détaillée contenant :
+	•	Informations du client (nom, contact, pays)
+	•	Pack réservé et options choisies
+	•	Date souhaitée et nombre de participants
+	•	Historique des statuts (avec date et auteur de chaque changement)
+	•	Preuve de paiement soumise (document téléchargeable)
+	•	Notes internes (visibles uniquement par l'équipe)
+	•	Journal de toutes les communications
+
+4.3 Gestion des Clients
+L'équipe peut consulter la liste de tous les utilisateurs inscrits sur la plateforme.
+
+	•	Profil complet : informations personnelles, pays, date d'inscription
+	•	Historique des réservations du client
+	•	Possibilité d'envoyer un message directement depuis la fiche client
+	•	Possibilité de désactiver un compte si nécessaire
+
+4.4 Gestion des Contenus (Espace Voyageur)
+L'équipe peut gérer et mettre à jour les contenus informationnels disponibles dans l'espace Guide du Voyageur.
+
+	•	Créer, modifier ou supprimer des articles d'information
+	•	Organiser les contenus par catégorie (santé, visa, transport, etc.)
+	•	Ajouter des documents téléchargeables (fiches PDF, cartes, programmes)
+	•	Publier ou masquer des contenus
+
+4.5 Notifications et Communications
+	•	Le dashboard envoie des notifications automatiques aux clients (email) à chaque changement de statut
+	•	L'équipe peut envoyer des messages manuels depuis la fiche de réservation
+	•	Des alertes internes signalent les nouvelles réservations ou les preuves de paiement à vérifier
+
+4.7 Tableau de bord & Statistiques
+Un espace de visualisation des données clés pour le suivi de l'activité :
+
+	•	Nombre de réservations par semaine / mois
+	•	Réservations confirmées vs. annulées
+	•	Revenus estimés sur la période
+	•	Packs les plus réservés
+	•	Pays d'origine des clients
+	•	Nombre de nouveaux inscrits
+
+
+5. Parcours complet d'un client — De A à Z
+Cette section décrit, de manière chronologique, le parcours d'un client depuis qu'il découvre Vakpon Tours jusqu'à son retour de voyage.
+
+Étape
+Action du client
+Action de l'équipe
+1
+Visite le site vitrine, découvre les packs
+—
+2
+Crée un compte sur la Web App
+Email de confirmation envoyé automatiquement
+3
+Choisit un pack et soumet une réservation
+Notification reçue dans le dashboard
+4
+Attend le contact de l'équipe
+Un agent prend contact (WhatsApp / email / appel)
+5
+Reçoit les instructions de paiement
+L'agent partage les coordonnées bancaires / mobile money
+6
+Effectue le paiement
+—
+7
+Télécharge sa preuve de paiement dans l'app
+Notification : nouvelle preuve à vérifier
+8
+Attend la confirmation
+L'agent vérifie et valide le paiement
+9
+Reçoit la confirmation officielle du séjour
+Le statut passe à « Réservation confirmée »
+10
+Consulte l'espace Guide du Voyageur
+Documents et infos mis à disposition
+11
+Effectue son voyage au Bénin
+Accompagnement sur place si prévu
+12
+Retour — peut laisser un avis
+Archivage du dossier, demande d'avis
+
+
+6. Règles et contraintes importantes
+6.1 Pas de paiement en ligne direct
+La plateforme ne traite pas les paiements par carte bancaire en ligne dans un premier temps. Le processus de paiement se fait hors ligne (virement, mobile money, etc.) après contact humain avec l'équipe. Cela simplifie les contraintes techniques et réglementaires au démarrage.
+
+💡 Ce choix peut évoluer dans une version future, en intégrant un module de paiement en ligne (Stripe , etc.).
+
+6.2 Réservation non engageante sans validation humaine
+Soumettre une réservation ne constitue pas un engagement ferme. Le contrat n'est conclu qu'une fois le paiement vérifié et la réservation officiellement confirmée par l'équipe. Cela est clairement indiqué au client à chaque étape.
+
+6.3 Sécurité des données
+	•	Les mots de passe sont chiffrés et jamais stockés en clair
+	•	Les informations personnelles des clients ne sont pas partagées avec des tiers
+	•	Les preuves de paiement sont stockées de manière sécurisée
+	•	Seuls les membres autorisés peuvent accéder au dashboard administrateur
+
+7. Feuille de route — Priorités de développement (V1)
+Pour lancer une première version fonctionnelle (MVP), voici les modules à développer en priorité :
+
+Priorité
+Module
+Description
+1 — Indispensable
+Site Vitrine
+Page d'accueil, packs, contact, about
+1 — Indispensable
+Inscription / Connexion
+Création de compte, email de confirmation
+1 — Indispensable
+Réservation client
+Choix pack, soumission, confirmation
+1 — Indispensable
+Dashboard admin — Réservations
+Consultation, changement de statut, validation
+2 — Important
+Gestion des packs (admin)
+Créer, modifier, publier des packs
+2 — Important
+Upload preuve de paiement
+Téléchargement de document côté client
+2 — Important
+Notifications email
+Envois automatiques aux clients
+3 — Optionnel V1
+Espace Guide du Voyageur
+Contenus informationnels
+3 — Optionnel V1
+Statistiques admin
+Tableau de bord analytique
+4 — V2
+Paiement en ligne
+Intégration d'une passerelle de paiement
+
+
+
+Document préparé par l'équipe technique de Vakpon Tours
